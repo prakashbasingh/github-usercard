@@ -52,4 +52,23 @@ const followersArray = [];
   justsml
   luishrd
   bigknell
+
 */
+
+function userCard({avatarURL, name, userName, location, htmlURL, following, bio}){
+// creating element
+const cardDiv = document.createElement('div')
+const userImg = document.createElement('img')
+const cardInfoDiv = document.createElement('div')
+const nameH3 = document.createElement('h3')
+const userNameP = document.createElement('p')
+const locationP = document.createElement('p')
+const profileP = document.createElement('p')
+const userLink = document.createElement('a')
+const followerP = document.createElement('p')
+const followingP = document.createElement('p')
+const bioP = document.createElement('p')
+
+
+
+}
