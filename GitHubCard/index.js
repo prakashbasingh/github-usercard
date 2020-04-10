@@ -2,7 +2,7 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
-axios.get('https://api.github.com/users/prakashbasingh>')
+axios.get('https://api.github.com/users/prakashbasingh')
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
    data in order to use it to build your component function 
@@ -68,6 +68,35 @@ const userLink = document.createElement('a')
 const followerP = document.createElement('p')
 const followingP = document.createElement('p')
 const bioP = document.createElement('p')
+
+// creating element structure 
+cardDiv.appendChild.apply(userImg)
+cardDiv.appendChild.apply(cardInfoDiv)
+cardInfoDiv.appendChild(nameH3)
+cardInfoDiv.appendChild(userNameP)
+cardInfoDiv.appendChild(locationP)
+cardInfoDiv.appendChild(profileP)
+profileP.appendChild(userLink)
+cardInfoDiv.appendChild(followerP)
+cardInfoDiv.appendChild(followingP)
+cardInfoDiv.appendChild(bioP)
+
+// giving class name/attributes
+cardDiv.classList.add('card')
+userImg.src = imgURL
+cardInfoDiv.classList.add('card-info')
+nameH3.classList.add('name')
+userNameP.classList.add('username')
+profileP.href = htmlURL
+
+// setting content
+personName.textContent = Name
+userName.textContent = `User Name: ${login}`
+userLocation.textContent = Location
+userProfileLine.textContent = htmlURL
+userFollowers.textContent = `Followers: ${followers}`
+userFollowing.textContent = `Following: ${following}`
+userBio.textContent = `Bio: ${bio}`
 
 
 
