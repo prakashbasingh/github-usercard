@@ -38,6 +38,31 @@ axios.get('https://api.github.com/users/prakashbasingh')
 
 // const followersArray = [  'tetondan', 'dustinmyers',  'justsml',  'luishrd',  'bigknell'];
 
+const card = document.querySelector('.cards')
+
+axios.get('https://api.github.com/users/prakashbasingh/followers')
+  .then (success => {
+        // console.log(success)
+        // debugger
+     success.data.forEach(item => { 
+         // console.log(success)
+        const followerURL = item.url 
+        axios.get(followerURL)
+          .then(success => {
+        // console.log(success)
+          const newFollowersCard = userCard(success.data)
+        // console.log(success)
+          card.appendChild(newFollowersCard)
+          })
+            .catch(failure => {
+            console.log(failure)
+          })
+      })
+    })
+    .catch (
+      failure =>{
+      console.log(failure)
+  })
 
 
        
